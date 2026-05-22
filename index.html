@@ -6,7 +6,14 @@
   <title>Kshitij Ingale — Full-Stack Developer</title>
   <meta name="description" content="Full-Stack Developer with 2+ years building scalable web apps using MERN stack and Next.js. Open to full-time software engineering roles." />
   <meta name="keywords" content="Kshitij Ingale, Full-Stack Developer, MERN, Next.js, React, Node.js, Portfolio" />
+  <link
+      rel="shortcut icon"
+      href="./assets/favicon.png"
+      type="image/x-icon"
+    />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080c10'/%3E%3Crect width='32' height='32' rx='8' fill='none' stroke='%2339d0a0' stroke-width='1.5' opacity='0.4'/%3E%3Ctext x='16' y='21' font-family='JetBrains Mono%2C monospace' font-size='11' font-weight='500' fill='%2339d0a0' text-anchor='middle' letter-spacing='-0.5'%3E%3C/%3E%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
@@ -660,8 +667,110 @@
     .footer-links a:hover { color: var(--accent); }
 
     /* ─────────────────────────────────────────────
-       ANIMATIONS
+       BLOG
     ───────────────────────────────────────────── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .blog-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+      text-decoration: none;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-border);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+    }
+
+    .blog-cover {
+      width: 100%; aspect-ratio: 16 / 8;
+      overflow: hidden; position: relative;
+      background: var(--bg3);
+    }
+    .blog-cover img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform 0.45s ease;
+      filter: brightness(0.88) saturate(0.9);
+    }
+    .blog-card:hover .blog-cover img {
+      transform: scale(1.05);
+      filter: brightness(0.95) saturate(1);
+    }
+    .blog-cover-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(8,12,16,0.7) 100%);
+    }
+
+    .blog-body {
+      padding: 1.5rem 1.6rem 1.7rem;
+      display: flex; flex-direction: column; flex: 1;
+    }
+
+    .blog-meta {
+      display: flex; align-items: center; gap: 0.6rem;
+      margin-bottom: 0.85rem;
+    }
+    .blog-tag {
+      font-family: var(--font-mono); font-size: var(--text-xs);
+      color: var(--accent); background: rgba(57,208,160,0.1);
+      border: 1px solid var(--accent-border);
+      padding: 0.18em 0.65em; border-radius: 100px;
+    }
+    .blog-dot { width: 3px; height: 3px; background: var(--text-muted); border-radius: 50%; }
+    .blog-date {
+      font-family: var(--font-mono); font-size: var(--text-xs);
+      color: var(--text-muted);
+    }
+    .blog-read-time {
+      font-family: var(--font-mono); font-size: var(--text-xs);
+      color: var(--text-muted); margin-left: auto;
+    }
+
+    .blog-title {
+      font-family: var(--font-display);
+      font-size: 1.12rem; font-weight: 700;
+      color: var(--text-bright); line-height: 1.35;
+      letter-spacing: -0.01em; margin-bottom: 0.6rem;
+      transition: color 0.2s;
+    }
+    .blog-card:hover .blog-title { color: var(--accent); }
+
+    .blog-excerpt {
+      font-family: var(--font-body);
+      font-size: var(--text-sm); color: var(--text-dim);
+      font-weight: 400; line-height: 1.72;
+      flex: 1; margin-bottom: 1.35rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .blog-cta {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: var(--font-display); font-size: var(--text-sm);
+      font-weight: 600; color: var(--accent);
+      transition: gap 0.2s;
+    }
+    .blog-cta svg { width: 14px; height: 14px; transition: transform 0.2s; }
+    .blog-card:hover .blog-cta { gap: 0.65rem; }
+    .blog-card:hover .blog-cta svg { transform: translateX(3px); }
+
+    .blog-footer {
+      margin-top: 2.5rem; text-align: center;
+    }
+
+  
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(18px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -725,6 +834,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="#contact" class="nav-cta">Hire Me</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -735,6 +845,7 @@
     <a href="#about"      onclick="closeMobile()">About</a>
     <a href="#projects"   onclick="closeMobile()">Projects</a>
     <a href="#experience" onclick="closeMobile()">Experience</a>
+    <a href="#blog"       onclick="closeMobile()">Blog</a>
     <a href="#contact"    onclick="closeMobile()">Hire Me →</a>
   </div>
 
@@ -1178,10 +1289,98 @@
   <hr class="divider" />
 
   <!-- ═══════════════════════════════════════
+       BLOG
+  ════════════════════════════════════════ -->
+  <section id="blog">
+    <div class="section-label">04 / Blog</div>
+    <h2 class="section-title">Writing & Thoughts</h2>
+
+    <div class="blog-grid">
+
+      <!-- Post 1: Positioning of Elements in CSS -->
+      <a class="blog-card reveal"
+         href="https://kshitijingale.hashnode.dev/positioning-of-elements-in-css"
+         target="_blank" rel="noopener noreferrer">
+        <div class="blog-cover">
+          <img
+            src="https://cdn.hashnode.com/res/hashnode/image/unsplash/6JVlSdgMacE/upload/v1659881919723/fs1e2Emp-.jpeg?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp"
+            alt="Positioning of Elements in CSS"
+            loading="lazy"
+          />
+          <div class="blog-cover-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">CSS</span>
+            <span class="blog-dot"></span>
+            <span class="blog-date">Aug 8, 2022</span>
+            <span class="blog-read-time">3 min read</span>
+          </div>
+          <h3 class="blog-title">Positioning of Elements in CSS</h3>
+          <p class="blog-excerpt">
+            The position property in CSS tells about the technique for positioning
+            of HTML elements on a webpage. There are five distinct kinds of position
+            values — and knowing when to use each one is fundamental to building
+            solid layouts.
+          </p>
+          <span class="blog-cta">
+            Read Article
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Post 2: How CSS Selectors Work -->
+      <a class="blog-card reveal reveal-d1"
+         href="https://kshitijingale.hashnode.dev/how-css-selectors-work"
+         target="_blank" rel="noopener noreferrer">
+        <div class="blog-cover">
+          <img
+            src="https://cdn.hashnode.com/res/hashnode/image/unsplash/TkZYCXmrKK4/upload/v1659881503707/-2PJXThu5.jpeg?w=800&h=420&fit=crop&crop=entropy&auto=compress,format&format=webp"
+            alt="How CSS Selectors Work"
+            loading="lazy"
+          />
+          <div class="blog-cover-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">CSS</span>
+            <span class="blog-dot"></span>
+            <span class="blog-date">Jul 23, 2022</span>
+            <span class="blog-read-time">4 min read</span>
+          </div>
+          <h3 class="blog-title">How CSS Selectors Work</h3>
+          <p class="blog-excerpt">
+            The greatest key to understanding CSS is figuring out selectors.
+            They let you target specific HTML elements and apply styles precisely.
+            Understanding selector specificity and combinators unlocks the full
+            power of CSS.
+          </p>
+          <span class="blog-cta">
+            Read Article
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="blog-footer reveal">
+      <a href="https://kshitijingale.hashnode.dev" target="_blank" rel="noopener noreferrer"
+         class="btn btn-outline">
+        View All Posts on Hashnode
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ═══════════════════════════════════════
        CONTACT
   ════════════════════════════════════════ -->
   <section id="contact">
-    <div class="section-label">04 / Contact</div>
+    <div class="section-label">05 / Contact</div>
     <h2 class="section-title">Let's Work Together</h2>
     <div class="contact-grid">
       <div class="contact-lead reveal">
