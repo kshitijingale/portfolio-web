@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kshitij Ingale — Full-Stack Developer</title>
-  <meta name="description" content="Full-Stack Developer with 2+ years building scalable web apps using MERN stack and Next.js. Open to full-time software engineering roles." />
-  <meta name="keywords" content="Kshitij Ingale, Full-Stack Developer, MERN, Next.js, React, Node.js, Portfolio" />
+  <title>Kshitij Ingale — Full-Stack &amp; GenAI Engineer</title>
+  <meta name="description" content="Full-Stack &amp; GenAI Engineer with 2+ years building RAG systems, grounded LLM apps, and scalable products with Next.js and TypeScript. Open to full-time roles." />
+  <meta name="keywords" content="Kshitij Ingale, Full-Stack Engineer, GenAI, RAG, LangChain, Next.js, React, Node.js, OpenAI, Qdrant, Portfolio" />
   <link
       rel="shortcut icon"
       href="./assets/favicon.png"
@@ -768,6 +768,7 @@
 
     .blog-footer {
       margin-top: 2.5rem; text-align: center;
+      display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;
     }
 
   
@@ -851,7 +852,7 @@
 
   <!-- OPEN TO WORK -->
   <div class="otw-banner">
-    <strong>✦ Open to Work</strong> — Actively looking for full-time Software Engineering roles
+    <strong>✦ Open to Work</strong> — Actively looking for full-time Full-Stack &amp; GenAI roles
   </div>
 
   <!-- ═══════════════════════════════════════
@@ -869,10 +870,10 @@
       </div>
       <p class="hero-greeting">// Hello, world. I'm</p>
       <h1 class="hero-name">Kshitij Ingale</h1>
-      <p class="hero-title">Full-Stack Developer</p>
+      <p class="hero-title">Full-Stack &amp; GenAI Engineer</p>
       <p class="hero-desc">
-        I build fast, scalable web applications — from AI-powered SaaS tools
-        to real-time platforms — using the MERN stack, Next.js, and TypeScript.
+        I ship full-stack products and grounded GenAI systems — RAG pipelines,
+        cited chat, and study tools — with Next.js, TypeScript, and the MERN stack.
         2+ years of shipping production code.
       </p>
       <div class="hero-actions">
@@ -947,7 +948,7 @@
           <circle cx="74"  cy="52" r="4.5" fill="#f85149" opacity="0.8"/>
           <circle cx="89"  cy="52" r="4.5" fill="#e3b341" opacity="0.8"/>
           <circle cx="104" cy="52" r="4.5" fill="#3fb950" opacity="0.8"/>
-          <text x="185" y="56" font-family="JetBrains Mono, monospace" font-size="7" fill="#3d5570" text-anchor="middle">kshitij — portfolio/src/app</text>
+          <text x="185" y="56" font-family="JetBrains Mono, monospace" font-size="7" fill="#3d5570" text-anchor="middle">kshitij — learnforge/src</text>
 
           <!-- code content area background -->
           <rect x="58" y="62" width="324" height="178" fill="#060b10"/>
@@ -973,17 +974,17 @@
           <rect x="84" y="143" width="292" height="13" rx="1" fill="rgba(57,208,160,0.05)"/>
 
           <!-- code lines — animated -->
-          <text class="code-line cmt" x="88" y="81">// FitAI — AI Fitness Coach</text>
-          <text class="code-line kw"  x="88" y="95">import <tspan class="code-line" style="fill:#a5d6ff;opacity:1">{ NextResponse }</tspan> from <tspan fill="#a5d6ff">'next/server'</tspan></text>
-          <text class="code-line kw"  x="88" y="109">import <tspan fill="#a5d6ff">{ streamText }</tspan> from <tspan fill="#a5d6ff">'anthropic'</tspan></text>
+          <text class="code-line cmt" x="88" y="81">// LearnForge — grounded RAG chat</text>
+          <text class="code-line kw"  x="88" y="95">import <tspan class="code-line" style="fill:#a5d6ff;opacity:1">{ embedQuery }</tspan> from <tspan fill="#a5d6ff">'./openai'</tspan></text>
+          <text class="code-line kw"  x="88" y="109">import <tspan fill="#a5d6ff">{ searchChunks }</tspan> from <tspan fill="#a5d6ff">'./qdrant'</tspan></text>
           <text class="code-line"     x="88" y="123" fill="#3d5570"> </text>
           <text class="code-line kw"  x="88" y="137">export async <tspan fill="#d2a8ff">function</tspan> <tspan fill="#7ee787">POST</tspan>(req<tspan fill="#3d5770">:</tspan> Request) {`{`}</text>
-          <text class="code-line"     x="88" y="151" fill="#c9d1d9">  const <tspan fill="#79c0ff">{ goal, history }</tspan> = await req.<tspan fill="#7ee787">json</tspan>()</text>
-          <text class="code-line fn"  x="88" y="165">  const stream = await <tspan fill="#7ee787">streamText</tspan>({'{'}</text>
-          <text class="code-line"     x="88" y="179" fill="#c9d1d9">    model: <tspan fill="#a5d6ff">"claude-sonnet-4"</tspan>,</text>
-          <text class="code-line val" x="88" y="193">    prompt: buildPrompt(goal, history),</text>
+          <text class="code-line"     x="88" y="151" fill="#c9d1d9">  const <tspan fill="#79c0ff">{ query, workspaceId }</tspan> = await req.<tspan fill="#7ee787">json</tspan>()</text>
+          <text class="code-line fn"  x="88" y="165">  const hits = await <tspan fill="#7ee787">searchChunks</tspan>({'{'}</text>
+          <text class="code-line"     x="88" y="179" fill="#c9d1d9">    vector: await <tspan fill="#7ee787">embedQuery</tspan>(query),</text>
+          <text class="code-line val" x="88" y="193">    filter: {'{'} workspaceId {'}'},</text>
           <text class="code-line"     x="88" y="207" fill="#c9d1d9">  {'}'}) </text>
-          <text class="code-line kw"  x="88" y="221">  return <tspan fill="#7ee787">NextResponse</tspan>.<tspan fill="#d2a8ff">json</tspan>({'{'} stream <tspan fill="#3d5770">{'}'}</tspan>)</text>
+          <text class="code-line kw"  x="88" y="221">  return <tspan fill="#7ee787">streamCitedAnswer</tspan>(query, hits)</text>
           <text class="code-line"     x="88" y="235" fill="#c9d1d9">{'}'}</text>
 
           <!-- blinking cursor after line 12 -->
@@ -1027,15 +1028,17 @@
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          I'm a <strong>Full-Stack Developer</strong> based in Maharashtra with a B.E. in
+          I'm a <strong>Full-Stack &amp; GenAI Engineer</strong> based in Maharashtra with a B.E. in
           Computer Science from Nagpur University (80% aggregate). I've been building
-          production-grade web applications for over 2 years — from real-time chat
-          platforms to AI-powered SaaS products.
+          production-grade web apps for over 2 years — and lately, systems that retrieve,
+          cite, and reason over a user's own sources.
         </p>
         <p>
-          My recent work includes <strong>FitAI</strong>, an AI fitness coach built with
-          Next.js 14, TypeScript, PostgreSQL, and the Grok API with streaming responses.
-          I care deeply about <strong>performance, clean architecture, and developer experience</strong>.
+          My featured project is <strong>LearnForge</strong>, a NotebookLM-style study notebook:
+          ingest PDFs, links, and YouTube captions, index them in Qdrant, then stream
+          grounded answers with citations plus quizzes, flashcards, and mind maps.
+          I also built <strong>FitAI</strong>, an AI fitness coach with streaming LLM responses.
+          I care about <strong>retrieval quality, clean architecture, and shipping</strong>.
         </p>
         <p>
           Beyond code, I'm an anime enthusiast and sci-fi buff. When I'm not shipping
@@ -1050,6 +1053,15 @@
 
       <div class="skills-col reveal reveal-d1">
         <div>
+          <div class="skill-group-label">// GenAI</div>
+          <div class="skill-chips">
+            <span class="chip">RAG</span><span class="chip">LangChain</span>
+            <span class="chip">OpenAI</span><span class="chip">Qdrant</span>
+            <span class="chip">Embeddings</span><span class="chip">Cited chat</span>
+            <span class="chip">Groq API</span>
+          </div>
+        </div>
+        <div>
           <div class="skill-group-label">// Frontend</div>
           <div class="skill-chips">
             <span class="chip">React.js</span><span class="chip">Next.js</span>
@@ -1063,12 +1075,14 @@
             <span class="chip">Node.js</span><span class="chip">Express.js</span>
             <span class="chip">REST APIs</span><span class="chip">Socket.IO</span>
             <span class="chip">JWT Auth</span><span class="chip">Prisma ORM</span>
+            <span class="chip">Drizzle ORM</span>
           </div>
         </div>
         <div>
           <div class="skill-group-label">// Databases</div>
           <div class="skill-chips">
             <span class="chip">MongoDB</span><span class="chip">PostgreSQL</span>
+            <span class="chip">Qdrant</span><span class="chip">Neon</span>
             <span class="chip">Mongoose</span>
           </div>
         </div>
@@ -1083,8 +1097,9 @@
         <div>
           <div class="skill-group-label">// Integrations</div>
           <div class="skill-chips">
-            <span class="chip">Grok API</span><span class="chip">Stripe</span>
-            <span class="chip">NextAuth</span><span class="chip">Google OAuth</span>
+            <span class="chip">Firecrawl</span><span class="chip">Tavily</span>
+            <span class="chip">Stripe</span><span class="chip">NextAuth</span>
+            <span class="chip">Google OAuth</span>
           </div>
         </div>
       </div>
@@ -1104,43 +1119,42 @@
       </div>
     </div>
 
-    <!-- FitAI — FEATURED -->
+    <!-- LearnForge — FEATURED -->
     <div class="featured-card reveal">
       <div class="featured-pill">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         Featured Project
       </div>
-      <h3>FitAI — AI-Powered Fitness Coach SaaS</h3>
+      <h3>LearnForge — Turn sources into understanding</h3>
       <p>
-        A full-stack fitness tracking SaaS with a personal AI coach. Users log workouts,
-        track strength progress, beat personal records, and chat with an AI that knows
-        their entire training history. Streaming responses via the Grok API. Also generates
-        custom multi-week programs from a plain-text goal description, and estimates
-        nutrition macros from a meal description.
+        A self-hosted study notebook inspired by Google NotebookLM. Collect PDFs, pasted text,
+        web pages, YouTube captions, and VTT files in a workspace, then chat with them and
+        generate summaries, mind maps, quizzes, and flashcards — with answers grounded in
+        <em>your</em> sources, not the model's training data.
       </p>
       <div class="feat-list">
-        <span class="feat-item">Workout logging — sets, reps, weight &amp; RPE</span>
-        <span class="feat-item">Streaming AI coach (Grok API)</span>
-        <span class="feat-item">Automatic PR detection</span>
-        <span class="feat-item">AI nutrition logging</span>
-        <span class="feat-item">Google OAuth + Email auth</span>
-        <span class="feat-item">Strength progress charts</span>
-        <span class="feat-item">AI program generator</span>
-        <span class="feat-item">Jest unit tests</span>
+        <span class="feat-item">RAG: extract → chunk → embed → Qdrant</span>
+        <span class="feat-item">Streaming chat with clickable citations</span>
+        <span class="feat-item">PDF, web, YouTube &amp; VTT ingestion</span>
+        <span class="feat-item">Studio: summary, mind map, quiz, flashcards</span>
+        <span class="feat-item">Optional Tavily web search in chat</span>
+        <span class="feat-item">Per-user vector collections &amp; workspace filters</span>
+        <span class="feat-item">Email, Google &amp; GitHub auth</span>
+        <span class="feat-item">SSRF guards, rate limits, ownership checks</span>
       </div>
       <div class="tech-row">
-        <span class="tech-pill">Next.js 14</span><span class="tech-pill">TypeScript</span>
-        <span class="tech-pill">PostgreSQL</span><span class="tech-pill">Prisma ORM</span>
-        <span class="tech-pill">Grok API</span><span class="tech-pill">NextAuth.js</span>
-        <span class="tech-pill">Tailwind CSS</span><span class="tech-pill">Vercel + Supabase</span>
-        <span class="tech-pill">Jest</span>
+        <span class="tech-pill">Next.js</span><span class="tech-pill">TypeScript</span>
+        <span class="tech-pill">Neon Postgres</span><span class="tech-pill">Drizzle</span>
+        <span class="tech-pill">Qdrant</span><span class="tech-pill">OpenAI</span>
+        <span class="tech-pill">LangChain</span><span class="tech-pill">Firecrawl</span>
+        <span class="tech-pill">Tavily</span>
       </div>
       <div class="proj-links">
-        <a href="https://fitai-app-coach.vercel.app/" target="_blank" class="proj-link pl-primary">
+        <a href="https://learnforge-prod.vercel.app/" target="_blank" class="proj-link pl-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Live Demo
         </a>
-        <a href="https://github.com/kshitijingale/FitAI" target="_blank" class="proj-link pl-ghost">
+        <a href="https://github.com/kshitijingale/Learnforge" target="_blank" class="proj-link pl-ghost">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
           Source Code
         </a>
@@ -1149,6 +1163,26 @@
 
     <!-- Cards grid -->
     <div class="cards-grid">
+      <!-- FitAI -->
+      <div class="proj-card reveal">
+        <div class="card-header">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg></div>
+          <div class="card-ext-links">
+            <a href="https://fitai-app-coach.vercel.app/" target="_blank" aria-label="Live Demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="https://github.com/kshitijingale/FitAI" target="_blank" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h4>FitAI</h4>
+        <p>Fitness SaaS with a streaming AI coach that uses full training history. Workout logging, PR detection, program generation, and meal macros from plain text.</p>
+        <div class="card-tags">
+          <span>Next.js</span><span>PostgreSQL</span><span>Prisma</span><span>Groq API</span><span>NextAuth</span>
+        </div>
+      </div>
+
       <!-- Shopmore 2.0 -->
       <div class="proj-card reveal">
         <div class="card-header">
@@ -1264,6 +1298,7 @@
         </div>
         <ul class="exp-list">
           <li>Built and deployed a production-ready <strong>React/Next.js web app</strong> for a client, achieving a <strong>40% improvement in Core Web Vitals</strong> scores and organic search traffic.</li>
+          <li>Used <strong>Cursor, Claude, and ChatGPT</strong> across the workflow to ship faster, cut boilerplate, and tighten review cycles — about <strong>30%</strong> less development time.</li>
           <li>Implemented advanced SEO: structured data markup, meta tag optimization, and image compression pipelines — directly boosting search engine visibility.</li>
           <li>Delivered the project <strong>ahead of schedule</strong> via weekly client feedback loops and iterative sprints, resulting in zero post-launch rework.</li>
           <li>Designed fully <strong>responsive UI components</strong> with Tailwind CSS ensuring consistent cross-browser and cross-device experience.</li>
@@ -1297,7 +1332,70 @@
 
     <div class="blog-grid">
 
-      <!-- Post 1: Positioning of Elements in CSS -->
+      <!-- Post 1: Where RAG Fails -->
+      <a class="blog-card reveal"
+         href="https://medium.com/@kshitijingale2/where-rag-fails-understand-the-limitations-3f5384ae4467"
+         target="_blank" rel="noopener noreferrer">
+        <div class="blog-cover">
+          <img
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&amp;h=420&amp;fit=crop&amp;auto=format"
+            alt="Where RAG Fails: Understand the Limitations"
+            loading="lazy"
+          />
+          <div class="blog-cover-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">AI</span>
+            <span class="blog-dot"></span>
+            <span class="blog-date">Aug 22, 2026</span>
+            <span class="blog-read-time">4 min read</span>
+          </div>
+          <h3 class="blog-title">Where RAG Fails: Understand the Limitations</h3>
+          <p class="blog-excerpt">
+            RAG retrieves what's semantically similar — not what's correct, current, or complete.
+            A look at poor retrieval, bad chunking, stale indexes, context windows, and when
+            RAG is the wrong tool.
+          </p>
+          <span class="blog-cta">
+            Read Article
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Post 2: How ChatGPT or Claude understands your prompt -->
+      <a class="blog-card reveal reveal-d1"
+         href="https://medium.com/@kshitijingale2/how-chatgpt-or-claude-understands-your-prompt-123f6107ff23"
+         target="_blank" rel="noopener noreferrer">
+        <div class="blog-cover">
+          <img
+            src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*2_2IOokHEtcdqAcooLW1pg.png"
+            alt="How ChatGPT or Claude understands your prompt"
+            loading="lazy"
+          />
+          <div class="blog-cover-overlay"></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="blog-tag">AI</span>
+            <span class="blog-dot"></span>
+            <span class="blog-date">Jul 1, 2026</span>
+            <span class="blog-read-time">4 min read</span>
+          </div>
+          <h3 class="blog-title">How ChatGPT or Claude understands your prompt</h3>
+          <p class="blog-excerpt">
+            We use ChatGPT or Claude for everyday tasks like summarising large text, generating images, research,
+            debugging code. Ever wondered what happens behind the scenes? How do these applications give responses to our prompts?
+          </p>
+          <span class="blog-cta">
+            Read Article
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Post 3: Positioning of Elements in CSS -->
       <a class="blog-card reveal"
          href="https://kshitijingale.hashnode.dev/positioning-of-elements-in-css"
          target="_blank" rel="noopener noreferrer">
@@ -1330,7 +1428,7 @@
         </div>
       </a>
 
-      <!-- Post 2: How CSS Selectors Work -->
+      <!-- Post 4: How CSS Selectors Work -->
       <a class="blog-card reveal reveal-d1"
          href="https://kshitijingale.hashnode.dev/how-css-selectors-work"
          target="_blank" rel="noopener noreferrer">
@@ -1363,44 +1461,17 @@
         </div>
       </a>
 
-      <!-- Post 3: How ChatGPT or Claude understands your prompt -->
-      <a class="blog-card reveal reveal-d1"
-         href="https://medium.com/@kshitijingale2/how-chatgpt-or-claude-understands-your-prompt-123f6107ff23"
-         target="_blank" rel="noopener noreferrer">
-        <div class="blog-cover">
-          <img
-            src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*2_2IOokHEtcdqAcooLW1pg.png"
-            alt="How CSS Selectors Work"
-            loading="lazy"
-          />
-          <div class="blog-cover-overlay"></div>
-        </div>
-        <div class="blog-body">
-          <div class="blog-meta">
-            <span class="blog-tag">AI</span>
-            <span class="blog-dot"></span>
-            <span class="blog-date">Jul 1, 2026</span>
-            <span class="blog-read-time">4 min read</span>
-          </div>
-          <h3 class="blog-title">How ChatGPT or Claude understands your prompt</h3>
-          <p class="blog-excerpt">
-            We use ChatGPT or Claude for our everyday tasks like summarising large text, generating images, research purpose,
-            debugging code 🧑‍💻.
-            Ever wondered what happens behind the scenes? How do these applications give responses to our prompts?
-          </p>
-          <span class="blog-cta">
-            Read Article
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
-        </div>
-      </a>
-
     </div>
 
     <div class="blog-footer reveal">
+      <a href="https://medium.com/@kshitijingale2" target="_blank" rel="noopener noreferrer"
+         class="btn btn-outline">
+        Medium
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
       <a href="https://kshitijingale.hashnode.dev" target="_blank" rel="noopener noreferrer"
          class="btn btn-outline">
-        View Blogs on Hashnode
+        Hashnode
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
       </a>
     </div>
@@ -1418,7 +1489,7 @@
       <div class="contact-lead reveal">
         <h3>Open to opportunities</h3>
         <p>
-          I'm actively looking for <strong style="color:var(--text-bright);font-weight:600">full-time software engineering roles</strong>.
+          I'm actively looking for <strong style="color:var(--text-bright);font-weight:600">full-time full-stack and GenAI roles</strong>.
           Whether you have a specific position in mind or just want to chat about a project — my inbox is open.
         </p>
         <div class="contact-list">
