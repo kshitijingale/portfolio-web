@@ -6,9 +6,10 @@
   <title>Kshitij Ingale — Full-Stack &amp; GenAI Engineer</title>
   <meta name="description" content="Full-Stack &amp; GenAI Engineer with 2+ years building RAG systems, grounded LLM apps, and scalable products with Next.js and TypeScript. Open to full-time roles." />
   <meta name="keywords" content="Kshitij Ingale, Full-Stack Engineer, GenAI, RAG, LangChain, Next.js, React, Node.js, OpenAI, Qdrant, Portfolio" />
-  <meta name="theme-color" content="#0B0F17" id="themeColorMeta" />
-  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0F17'/%3E%3Ctext x='16' y='21.5' font-family='monospace' font-size='13' font-weight='600' fill='%23818CF8' text-anchor='middle'%3EKI%3C/text%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#181C18" id="themeColorMeta" />
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="apple-touch-icon" href="./assets/favicon.png" />
   <script>
     (function () {
       var mode = 'dark';
@@ -25,19 +26,20 @@
 
 :root {
   color-scheme: dark;
-  --bg: #0B0F17;          --bg-soft: #0D1220;
-  --panel: #111726;       --panel-2: #161D30;
-  --border: #202A44;      --border-2: #2E3B60;
-  --ink: #E9EEF6;         --text: #A9B4CA;   --muted: #7E8BA3;
-  --accent: #818CF8;      --accent-2: #A5B4FC;  --accent-3: #C084FC;
-  --accent-soft: rgba(129,140,248,.12);
-  --accent-line: rgba(129,140,248,.34);
-  --accent-glow: rgba(129,140,248,.30);
-  --on-accent: #0B0F17;
-  --grad: linear-gradient(93deg, #818CF8, #C084FC);
-  --shadow: 0 20px 55px rgba(0,0,0,.45);
-  --nav-bg: rgba(11,15,23,.82);
-  --t-key: #C084FC;  --t-prop: #A5B4FC;  --t-str: #7DD3FC;
+  --bg: #181C18;          --bg-soft: #1C211C;
+  --panel: #1F241F;       --panel-2: #252B25;
+  --border: #2C332C;      --border-2: #3C453C;
+  --ink: #F3EEE4;         --text: #B5BBAF;   --muted: #8B9286;
+  --accent: #C9D9BE;      --accent-2: #DCE8D3;  --accent-3: #A8C09A;
+  --accent-soft: rgba(201,217,190,.12);
+  --accent-line: rgba(201,217,190,.32);
+  --accent-glow: rgba(201,217,190,.28);
+  --on-accent: #1A201A;
+  --btn: #D4E3C8;         --on-btn: #1A201A;
+  --grad: linear-gradient(93deg, #C9D9BE, #E8E2D4);
+  --shadow: 0 20px 55px rgba(0,0,0,.42);
+  --nav-bg: rgba(24,28,24,.84);
+  --t-key: #C9D9BE;  --t-prop: #E8E2D4;  --t-str: #A8C09A;
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -49,19 +51,20 @@
 
 html[data-theme="light"] {
   color-scheme: light;
-  --bg: #FAFBFF;          --bg-soft: #F2F5FC;
-  --panel: #FFFFFF;       --panel-2: #F6F8FE;
-  --border: #E2E7F3;      --border-2: #C9D3E8;
-  --ink: #0F172A;         --text: #4A5670;   --muted: #68748D;
-  --accent: #4F46E5;      --accent-2: #4338CA;  --accent-3: #9333EA;
-  --accent-soft: rgba(79,70,229,.07);
-  --accent-line: rgba(79,70,229,.30);
-  --accent-glow: rgba(79,70,229,.22);
-  --on-accent: #FFFFFF;
-  --grad: linear-gradient(93deg, #4F46E5, #9333EA);
-  --shadow: 0 16px 44px rgba(15,23,42,.09);
-  --nav-bg: rgba(250,251,255,.86);
-  --t-key: #7C3AED;  --t-prop: #4F46E5;  --t-str: #0284C7;
+  --bg: #F4F5F0;          --bg-soft: #EEF0EA;
+  --panel: #FBFBF8;       --panel-2: #F0F2EC;
+  --border: #E2E4DC;      --border-2: #CDD2C6;
+  --ink: #1C2118;         --text: #5A6156;   --muted: #757C72;
+  --accent: #2C5A3A;      --accent-2: #21462C;  --accent-3: #3D6E48;
+  --accent-soft: rgba(44,90,58,.08);
+  --accent-line: rgba(44,90,58,.28);
+  --accent-glow: rgba(44,90,58,.20);
+  --on-accent: #F6F7F2;
+  --btn: #1B3D2A;         --on-btn: #F6F7F2;
+  --grad: linear-gradient(93deg, #2C5A3A, #3D6E48);
+  --shadow: 0 16px 44px rgba(28,33,24,.08);
+  --nav-bg: rgba(244,245,240,.88);
+  --t-key: #2C5A3A;  --t-prop: #3D6E48;  --t-str: #1F6B7A;
 }
 
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 18px); }
@@ -80,7 +83,7 @@ body {
 
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
-::selection { background: var(--accent); color: var(--on-accent); }
+::selection { background: var(--btn); color: var(--on-btn); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
 ::-webkit-scrollbar { width: 10px; height: 10px; }
@@ -124,18 +127,27 @@ a { color: inherit; }
   transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease, box-shadow .22s ease;
 }
 .btn svg { width: 16px; height: 16px; flex: 0 0 16px; }
-.btn-primary { background: var(--accent); color: var(--on-accent); }
-.btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); box-shadow: 0 12px 28px var(--accent-glow); }
+.btn-primary { background: var(--btn); color: var(--on-btn); }
+.btn-primary:hover { background: var(--accent-2); color: var(--on-accent); transform: translateY(-2px); box-shadow: 0 12px 28px var(--accent-glow); }
 .btn-ghost { border-color: var(--border-2); color: var(--ink); background: transparent; }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 .btn-sm { padding: .58em 1.2em; font-size: .88rem; border-radius: 10px; }
 /* ── Nav ───────────────────────────────────── */
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 120; height: var(--nav-h); background: var(--nav-bg); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s ease, box-shadow .3s ease; }
-.nav.scrolled { border-bottom-color: var(--border); box-shadow: 0 12px 32px rgba(0,0,0,.24); }
-html[data-theme="light"] .nav.scrolled { box-shadow: 0 12px 32px rgba(15,23,42,.06); }
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 120; height: var(--nav-h);
+  background: transparent; border-bottom: 1px solid transparent;
+  transition: background .3s ease, border-color .3s ease, box-shadow .3s ease, backdrop-filter .3s ease, -webkit-backdrop-filter .3s ease;
+}
+.nav.scrolled {
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-bottom-color: var(--border);
+  box-shadow: 0 12px 32px rgba(0,0,0,.22);
+}
+html[data-theme="light"] .nav.scrolled { box-shadow: 0 12px 32px rgba(28,33,24,.05); }
 .nav-inner { height: 100%; max-width: var(--container); margin: 0 auto; padding-inline: var(--pad-x); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; }
-.brand-mark { width: 36px; height: 36px; flex: 0 0 36px; border-radius: 11px; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent), var(--accent-3)); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: .8rem; letter-spacing: .03em; }
+.brand-mark { width: 36px; height: 36px; flex: 0 0 36px; border-radius: 10px; object-fit: cover; background: var(--panel-2); border: 1px solid var(--border); }
 .brand-name { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; letter-spacing: -.01em; color: var(--ink); }
 .nav-links { display: flex; align-items: center; gap: .35rem; list-style: none; }
 .nav-links a { display: inline-block; padding: .5rem .9rem; border-radius: 10px; text-decoration: none; font-size: .92rem; font-weight: 500; color: var(--text); transition: color .18s ease, background .18s ease; }
@@ -182,33 +194,76 @@ html[data-theme="light"] .theme-toggle .icon-moon { display: none; }
 .hero-side { display: flex; flex-direction: column; gap: 1.1rem; min-width: 0; }
 
 /* ── Hero laptop illustration ──────────────── */
-.laptop-wrap { width: 100%; max-width: 480px; margin-inline: auto; }
-.laptop-svg { width: 100%; height: auto; display: block; animation: laptopFloat 6s ease-in-out infinite; }
-@keyframes laptopFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-.laptop-svg text { font-family: var(--font-mono); color: var(--text); fill: var(--text); white-space: pre; }
+.laptop-wrap { position: relative; width: 100%; max-width: 500px; margin-inline: auto; }
+.laptop-wrap::before {
+  content: ''; position: absolute; inset: 6% 4% 16%; pointer-events: none; z-index: 0;
+  background: radial-gradient(ellipse at 50% 42%, var(--accent-glow), transparent 70%);
+  filter: blur(32px);
+}
+.laptop-svg { position: relative; z-index: 1; width: 100%; height: auto; display: block; animation: laptopFloat 6s ease-in-out infinite; filter: drop-shadow(0 22px 28px rgba(0,0,0,.38)); }
+html[data-theme="light"] .laptop-svg { filter: drop-shadow(0 18px 24px rgba(28,33,24,.16)); }
+@keyframes laptopFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.laptop-svg text { font-family: var(--font-mono); color: #B5BBAF; fill: #B5BBAF; white-space: pre; }
 .laptop-svg tspan { fill: currentColor; }
 .laptop-svg .cln { opacity: 0; animation: lineIn .5s ease forwards; animation-delay: calc(.25s + var(--i) * .13s); }
 @keyframes lineIn { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: none; } }
-.laptop-svg .lg-lid-a { stop-color: var(--panel-2); }
-.laptop-svg .lg-lid-b { stop-color: var(--panel); }
-.laptop-svg .lg-base-a { stop-color: var(--panel-2); }
-.laptop-svg .lg-base-b { stop-color: var(--bg-soft); }
+.laptop-svg .tk-key { color: #C9D9BE; }
+.laptop-svg .tk-prop { color: #E8E2D4; }
+.laptop-svg .tk-str { color: #A8C09A; }
+.laptop-svg .tk-id { color: #F3EEE4; }
+.laptop-svg .tk-punc { color: #7E8678; }
+.laptop-svg .lg-lid-a { stop-color: #2A322A; }
+.laptop-svg .lg-lid-b { stop-color: #1A201A; }
+.laptop-svg .lg-base-a { stop-color: #323A32; }
+.laptop-svg .lg-base-b { stop-color: #1E241E; }
+.laptop-svg .lg-metal-a { stop-color: #3A443A; }
+.laptop-svg .lg-metal-b { stop-color: #232A23; }
 .laptop-svg .lg-rim-a { stop-color: var(--accent); }
 .laptop-svg .lg-rim-b { stop-color: var(--accent-3); }
 .laptop-svg .lg-glow-a { stop-color: var(--accent); }
 .laptop-svg .lg-glow-b { stop-color: var(--accent); }
-.laptop-svg .scr-bezel { fill: var(--bg); stroke: var(--border); }
-.laptop-svg .scr { fill: var(--bg-soft); stroke: var(--border); }
-.laptop-svg .scr-head { fill: var(--panel); }
-.laptop-svg .scr-line { stroke: var(--border); stroke-width: 1; }
-.laptop-svg .scr-title { fill: var(--muted); }
-.laptop-svg .base { stroke: var(--border-2); stroke-width: 1.5; }
-.laptop-svg .deck-key { fill: var(--border); opacity: .55; }
-.laptop-svg .deck-notch { fill: var(--border-2); opacity: .6; }
-.laptop-svg .ground { fill: rgba(0, 0, 0, .42); }
-html[data-theme="light"] .laptop-svg .ground { fill: rgba(15, 23, 42, .08); }
-.laptop-cursor { fill: var(--accent); animation: blink 1.1s steps(1) infinite; }
+.laptop-svg .scr-bezel { fill: #252C25; }
+.laptop-svg .scr { fill: #1A201A; }
+.laptop-svg .scr-head { fill: #222822; }
+.laptop-svg .scr-line { stroke: #2E362E; stroke-width: 1; }
+.laptop-svg .scr-title { fill: #8B9286; }
+.laptop-svg .cam { fill: #2A322A; }
+.laptop-svg .cam-dot { fill: #6A7468; }
+.laptop-svg .hinge { fill: #151A15; }
+.laptop-svg .base { stroke: #3C453C; stroke-width: 1.2; }
+.laptop-svg .deck-key { fill: #3E483E; }
+.laptop-svg .deck-notch { fill: #252C25; stroke: #3C453C; stroke-width: 1; }
+.laptop-svg .ground { fill: rgba(0, 0, 0, .48); }
+.laptop-svg .shine { fill: #fff; opacity: .06; pointer-events: none; }
+.laptop-cursor { fill: #C9D9BE; animation: blink 1.1s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
+html[data-theme="light"] .laptop-svg .lg-lid-a { stop-color: #F7F8F3; }
+html[data-theme="light"] .laptop-svg .lg-lid-b { stop-color: #D5DCCE; }
+html[data-theme="light"] .laptop-svg .lg-base-a { stop-color: #EEF1EA; }
+html[data-theme="light"] .laptop-svg .lg-base-b { stop-color: #C2CAB8; }
+html[data-theme="light"] .laptop-svg .lg-metal-a { stop-color: #E4E8DE; }
+html[data-theme="light"] .laptop-svg .lg-metal-b { stop-color: #B8C0B0; }
+html[data-theme="light"] .laptop-svg .lg-glow-a { stop-opacity: .42; }
+html[data-theme="light"] .laptop-svg .base { stroke: #A8B09E; }
+html[data-theme="light"] .laptop-svg .hinge { fill: #C5CCBA; }
+html[data-theme="light"] .laptop-svg .deck-key { fill: #9AA392; }
+html[data-theme="light"] .laptop-svg .deck-notch { fill: #DDE3D4; stroke: #B4BCA8; }
+html[data-theme="light"] .laptop-svg .scr-bezel { fill: #E7EBDF; }
+html[data-theme="light"] .laptop-svg .scr { fill: #FBFBF8; }
+html[data-theme="light"] .laptop-svg .scr-head { fill: #F3F5EE; }
+html[data-theme="light"] .laptop-svg .scr-line { stroke: #E2E4DC; }
+html[data-theme="light"] .laptop-svg .scr-title { fill: #757C72; }
+html[data-theme="light"] .laptop-svg .cam { fill: #C9D0C2; }
+html[data-theme="light"] .laptop-svg .cam-dot { fill: #8A9184; }
+html[data-theme="light"] .laptop-svg text { color: #5A6156; fill: #5A6156; }
+html[data-theme="light"] .laptop-svg .tk-key { color: #2C5A3A; }
+html[data-theme="light"] .laptop-svg .tk-prop { color: #3D6E48; }
+html[data-theme="light"] .laptop-svg .tk-str { color: #1F6B7A; }
+html[data-theme="light"] .laptop-svg .tk-id { color: #1C2118; }
+html[data-theme="light"] .laptop-svg .tk-punc { color: #8A9184; }
+html[data-theme="light"] .laptop-cursor { fill: #2C5A3A; }
+html[data-theme="light"] .laptop-svg .ground { fill: rgba(28, 33, 24, .16); }
+html[data-theme="light"] .laptop-svg .shine { opacity: .06; }
 
 /* syntax tokens (shared) */
 .tk-key { color: var(--t-key); }
@@ -300,19 +355,19 @@ html[data-theme="light"] .laptop-svg .ground { fill: rgba(15, 23, 42, .08); }
 .proj-tags span { font-family: var(--font-mono); font-size: .7rem; color: var(--muted); background: var(--panel-2); border: 1px solid var(--border); border-radius: 7px; padding: .22em .6em; }
 
 /* per-card icon tints (dark) */
-.pc-1 { --ic: #818CF8; --ic-bg: rgba(129,140,248,.12); --ic-line: rgba(129,140,248,.32); }
-.pc-2 { --ic: #C084FC; --ic-bg: rgba(192,132,252,.12); --ic-line: rgba(192,132,252,.32); }
-.pc-3 { --ic: #67E8F9; --ic-bg: rgba(103,232,249,.12); --ic-line: rgba(103,232,249,.32); }
-.pc-4 { --ic: #F0ABFC; --ic-bg: rgba(240,171,252,.12); --ic-line: rgba(240,171,252,.32); }
-.pc-5 { --ic: #7DD3FC; --ic-bg: rgba(125,211,252,.12); --ic-line: rgba(125,211,252,.32); }
-.pc-6 { --ic: #A5B4FC; --ic-bg: rgba(165,180,252,.12); --ic-line: rgba(165,180,252,.32); }
+.pc-1 { --ic: #C9D9BE; --ic-bg: rgba(201,217,190,.12); --ic-line: rgba(201,217,190,.32); }
+.pc-2 { --ic: #E8E2D4; --ic-bg: rgba(232,226,212,.12); --ic-line: rgba(232,226,212,.28); }
+.pc-3 { --ic: #8FBFB0; --ic-bg: rgba(143,191,176,.12); --ic-line: rgba(143,191,176,.32); }
+.pc-4 { --ic: #D4C48A; --ic-bg: rgba(212,196,138,.12); --ic-line: rgba(212,196,138,.28); }
+.pc-5 { --ic: #A8C09A; --ic-bg: rgba(168,192,154,.12); --ic-line: rgba(168,192,154,.32); }
+.pc-6 { --ic: #B7CDB0; --ic-bg: rgba(183,205,176,.12); --ic-line: rgba(183,205,176,.32); }
 /* per-card icon tints (light) */
-html[data-theme="light"] .pc-1 { --ic: #4F46E5; --ic-bg: rgba(79,70,229,.08); --ic-line: rgba(79,70,229,.22); }
-html[data-theme="light"] .pc-2 { --ic: #9333EA; --ic-bg: rgba(147,51,234,.08); --ic-line: rgba(147,51,234,.22); }
-html[data-theme="light"] .pc-3 { --ic: #0891B2; --ic-bg: rgba(8,145,178,.08); --ic-line: rgba(8,145,178,.22); }
-html[data-theme="light"] .pc-4 { --ic: #C026D3; --ic-bg: rgba(192,38,211,.08); --ic-line: rgba(192,38,211,.22); }
-html[data-theme="light"] .pc-5 { --ic: #0284C7; --ic-bg: rgba(2,132,199,.08); --ic-line: rgba(2,132,199,.22); }
-html[data-theme="light"] .pc-6 { --ic: #6366F1; --ic-bg: rgba(99,102,241,.08); --ic-line: rgba(99,102,241,.22); }
+html[data-theme="light"] .pc-1 { --ic: #2C5A3A; --ic-bg: rgba(44,90,58,.08); --ic-line: rgba(44,90,58,.22); }
+html[data-theme="light"] .pc-2 { --ic: #4A5C32; --ic-bg: rgba(74,92,50,.08); --ic-line: rgba(74,92,50,.22); }
+html[data-theme="light"] .pc-3 { --ic: #1F6B7A; --ic-bg: rgba(31,107,122,.08); --ic-line: rgba(31,107,122,.22); }
+html[data-theme="light"] .pc-4 { --ic: #8A6B24; --ic-bg: rgba(138,107,36,.08); --ic-line: rgba(138,107,36,.22); }
+html[data-theme="light"] .pc-5 { --ic: #3D6E48; --ic-bg: rgba(61,110,72,.08); --ic-line: rgba(61,110,72,.22); }
+html[data-theme="light"] .pc-6 { --ic: #355E3B; --ic-bg: rgba(53,94,59,.08); --ic-line: rgba(53,94,59,.22); }
 
 /* ── Experience timeline ───────────────────── */
 .timeline { position: relative; display: flex; flex-direction: column; gap: 1.6rem; margin-top: .5rem; }
@@ -337,8 +392,8 @@ html[data-theme="light"] .pc-6 { --ic: #6366F1; --ic-bg: rgba(99,102,241,.08); -
 .blog-cover { aspect-ratio: 16 / 8.4; overflow: hidden; background: var(--panel-2); position: relative; }
 .blog-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
 .blog-card:hover .blog-cover img { transform: scale(1.045); }
-.blog-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,15,23,.5), transparent 55%); }
-html[data-theme="light"] .blog-cover::after { background: linear-gradient(to top, rgba(250,251,255,.18), transparent 55%); }
+.blog-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(24,28,24,.5), transparent 55%); }
+html[data-theme="light"] .blog-cover::after { background: linear-gradient(to top, rgba(244,245,240,.18), transparent 55%); }
 .blog-body { padding: 1.35rem 1.45rem 1.5rem; display: flex; flex-direction: column; flex: 1; }
 .blog-meta { display: flex; align-items: center; gap: .6rem; margin-bottom: .8rem; font-family: var(--font-mono); font-size: .7rem; color: var(--muted); }
 .blog-tag { color: var(--accent); border: 1px solid var(--accent-line); background: var(--accent-soft); border-radius: 999px; padding: .2em .7em; font-size: .68rem; }
@@ -451,7 +506,7 @@ footer { border-top: 1px solid var(--border); background: var(--bg-soft); }
   <header class="nav" id="nav">
     <div class="nav-inner">
       <a class="brand" href="#hero" aria-label="Kshitij Ingale — back to top">
-        <span class="brand-mark" aria-hidden="true">KI</span>
+        <img class="brand-mark" src="./assets/favicon.png" width="36" height="36" alt="" />
         <span class="brand-name">Kshitij Ingale</span>
       </a>
       <nav aria-label="Primary">
@@ -467,7 +522,7 @@ footer { border-top: 1px solid var(--border); background: var(--bg-soft); }
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M1.5 12H4M20 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
         </button>
-        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Hire Me</a>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's talk</a>
         <button class="hamburger" id="burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="drawer">
           <span></span><span></span><span></span>
         </button>
@@ -480,7 +535,7 @@ footer { border-top: 1px solid var(--border); background: var(--bg-soft); }
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
     <a href="#blog">Blog</a>
-    <a href="#contact">Hire Me →</a>
+    <a href="#contact">Let's talk →</a>
   </nav>
 
   <main id="main">
@@ -535,50 +590,81 @@ footer { border-top: 1px solid var(--border); background: var(--bg-soft); }
                   <stop offset="0" class="lg-base-a"/>
                   <stop offset="1" class="lg-base-b"/>
                 </linearGradient>
+                <linearGradient id="lgMetal" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" class="lg-metal-b"/>
+                  <stop offset=".5" class="lg-metal-a"/>
+                  <stop offset="1" class="lg-metal-b"/>
+                </linearGradient>
                 <linearGradient id="lgRim" x1="0" y1="0" x2="1" y2="0">
                   <stop offset="0" class="lg-rim-a"/>
                   <stop offset="1" class="lg-rim-b"/>
                 </linearGradient>
-                <radialGradient id="lgGlow" cx="50%" cy="46%" r="62%">
-                  <stop offset="0" class="lg-glow-a" stop-opacity="0.26"/>
+                <radialGradient id="lgGlow" cx="50%" cy="42%" r="58%">
+                  <stop offset="0" class="lg-glow-a" stop-opacity="0.42"/>
                   <stop offset="1" class="lg-glow-b" stop-opacity="0"/>
                 </radialGradient>
+                <linearGradient id="lgShine" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#fff" stop-opacity=".22"/>
+                  <stop offset=".38" stop-color="#fff" stop-opacity="0"/>
+                </linearGradient>
+                <clipPath id="scrClip">
+                  <rect x="70" y="36" width="320" height="204" rx="8"/>
+                </clipPath>
                 <filter id="lgBlur" x="-40%" y="-40%" width="180%" height="180%">
-                  <feGaussianBlur stdDeviation="5"/>
+                  <feGaussianBlur stdDeviation="6"/>
                 </filter>
               </defs>
 
-              <ellipse cx="230" cy="158" rx="212" ry="142" fill="url(#lgGlow)"/>
+              <ellipse cx="230" cy="150" rx="220" ry="150" fill="url(#lgGlow)"/>
 
               <!-- lid -->
-              <rect x="60" y="18" width="340" height="238" rx="14" fill="url(#lgLid)" stroke="url(#lgRim)" stroke-width="1.5" stroke-opacity="0.75"/>
-              <rect class="scr-bezel" x="72" y="30" width="316" height="208" rx="8"/>
-              <rect class="scr" x="78" y="36" width="304" height="196" rx="5"/>
-              <path class="scr-head" d="M83 36 H377 A5 5 0 0 1 382 41 V58 H78 V41 A5 5 0 0 1 83 36 Z"/>
-              <line class="scr-line" x1="78" y1="58" x2="382" y2="58"/>
-              <rect x="88" y="236" width="284" height="2" rx="1" fill="url(#lgRim)" opacity="0.85"/>
+              <rect x="56" y="16" width="348" height="242" rx="18" fill="url(#lgLid)"/>
+              <rect class="scr-bezel" x="64" y="24" width="332" height="222" rx="12"/>
+              <circle class="cam" cx="230" cy="30.5" r="2.6"/>
+              <circle class="cam-dot" cx="230" cy="30.5" r="1"/>
+              <rect class="scr" x="70" y="36" width="320" height="204" rx="8"/>
+              <path class="scr-head" d="M78 36 H382 A8 8 0 0 1 390 44 V58 H70 V44 A8 8 0 0 1 78 36 Z"/>
+              <line class="scr-line" x1="70" y1="58" x2="390" y2="58"/>
+              <rect x="86" y="232" width="288" height="2" rx="1" fill="url(#lgRim)" opacity="0.55"/>
 
-              <circle cx="94" cy="47" r="3.2" fill="#ff5f57"/>
-              <circle cx="106" cy="47" r="3.2" fill="#febc2e"/>
-              <circle cx="118" cy="47" r="3.2" fill="#28c840"/>
-              <text class="scr-title" x="232" y="49.5" font-size="7" text-anchor="middle">kshitij — profile.ts</text>
+              <circle cx="86" cy="47" r="3.2" fill="#ff5f57"/>
+              <circle cx="98" cy="47" r="3.2" fill="#febc2e"/>
+              <circle cx="110" cy="47" r="3.2" fill="#28c840"/>
+              <text class="scr-title" x="230" y="50.5" font-size="7.2" text-anchor="middle">kshitij — profile.ts</text>
 
               <!-- code on screen -->
-              <text class="cln" style="--i:0" x="94" y="90" font-size="8.5" xml:space="preserve"><tspan class="tk-key">const</tspan> <tspan class="tk-id">engineer</tspan> <tspan class="tk-punc">= {</tspan></text>
-              <text class="cln" style="--i:1" x="94" y="106" font-size="8.5" xml:space="preserve">  <tspan class="tk-prop">name</tspan><tspan class="tk-punc">:</tspan>     <tspan class="tk-str">"Kshitij Ingale"</tspan><tspan class="tk-punc">,</tspan></text>
-              <text class="cln" style="--i:2" x="94" y="122" font-size="8.5" xml:space="preserve">  <tspan class="tk-prop">role</tspan><tspan class="tk-punc">:</tspan>     <tspan class="tk-str">"Full-Stack &amp; GenAI"</tspan><tspan class="tk-punc">,</tspan></text>
-              <text class="cln" style="--i:3" x="94" y="138" font-size="8.5" xml:space="preserve">  <tspan class="tk-prop">stack</tspan><tspan class="tk-punc">:</tspan>    <tspan class="tk-punc">[</tspan><tspan class="tk-str">"Next.js"</tspan><tspan class="tk-punc">, </tspan><tspan class="tk-str">"TypeScript"</tspan><tspan class="tk-punc">, </tspan><tspan class="tk-str">"Node"</tspan><tspan class="tk-punc">],</tspan></text>
-              <text class="cln" style="--i:4" x="94" y="154" font-size="8.5" xml:space="preserve">  <tspan class="tk-prop">genai</tspan><tspan class="tk-punc">:</tspan>    <tspan class="tk-punc">[</tspan><tspan class="tk-str">"RAG"</tspan><tspan class="tk-punc">, </tspan><tspan class="tk-str">"LangChain"</tspan><tspan class="tk-punc">, </tspan><tspan class="tk-str">"Qdrant"</tspan><tspan class="tk-punc">],</tspan></text>
-              <text class="cln" style="--i:5" x="94" y="170" font-size="8.5" xml:space="preserve">  <tspan class="tk-prop">location</tspan><tspan class="tk-punc">:</tspan> <tspan class="tk-str">"Maharashtra, India"</tspan><tspan class="tk-punc">,</tspan></text>
-              <text class="cln" style="--i:6" x="94" y="186" font-size="8.5" xml:space="preserve">  <tspan class="tk-prop">status</tspan><tspan class="tk-punc">:</tspan>   <tspan class="tk-str">"open to full-time"</tspan><tspan class="tk-punc">,</tspan></text>
-              <text class="cln" style="--i:7" x="94" y="202" font-size="8.5" xml:space="preserve"><tspan class="tk-punc">};</tspan></text>
-              <rect class="laptop-cursor" x="106" y="194" width="5.5" height="10" rx="1"/>
+              <text class="cln" style="--i:0" x="94" y="88" font-size="8.6" xml:space="preserve"><tspan class="tk-key">const</tspan> <tspan class="tk-id">engineer</tspan> <tspan class="tk-punc">= {</tspan></text>
+              <text class="cln" style="--i:1" x="94" y="105" font-size="8.6" xml:space="preserve">  <tspan class="tk-prop">name</tspan><tspan class="tk-punc">:</tspan>     <tspan class="tk-str">"Kshitij Ingale"</tspan><tspan class="tk-punc">,</tspan></text>
+              <text class="cln" style="--i:2" x="94" y="122" font-size="8.6" xml:space="preserve">  <tspan class="tk-prop">role</tspan><tspan class="tk-punc">:</tspan>     <tspan class="tk-str">"Full-Stack &amp; GenAI"</tspan><tspan class="tk-punc">,</tspan></text>
+              <text class="cln" style="--i:3" x="94" y="139" font-size="8.6" xml:space="preserve">  <tspan class="tk-prop">stack</tspan><tspan class="tk-punc">:</tspan>    <tspan class="tk-punc">[</tspan><tspan class="tk-str">"Next.js"</tspan><tspan class="tk-punc">, </tspan><tspan class="tk-str">"TypeScript"</tspan><tspan class="tk-punc">, </tspan><tspan class="tk-str">"Node"</tspan><tspan class="tk-punc">],</tspan></text>
+              <text class="cln" style="--i:4" x="94" y="156" font-size="8.6" xml:space="preserve">  <tspan class="tk-prop">genai</tspan><tspan class="tk-punc">:</tspan>    <tspan class="tk-punc">[</tspan><tspan class="tk-str">"RAG"</tspan><tspan class="tk-punc">, </tspan><tspan class="tk-str">"LangChain"</tspan><tspan class="tk-punc">, </tspan><tspan class="tk-str">"Qdrant"</tspan><tspan class="tk-punc">],</tspan></text>
+              <text class="cln" style="--i:5" x="94" y="173" font-size="8.6" xml:space="preserve">  <tspan class="tk-prop">location</tspan><tspan class="tk-punc">:</tspan> <tspan class="tk-str">"Maharashtra, India"</tspan><tspan class="tk-punc">,</tspan></text>
+              <text class="cln" style="--i:6" x="94" y="190" font-size="8.6" xml:space="preserve">  <tspan class="tk-prop">status</tspan><tspan class="tk-punc">:</tspan>   <tspan class="tk-str">"open to full-time"</tspan><tspan class="tk-punc">,</tspan></text>
+              <text class="cln" style="--i:7" x="94" y="207" font-size="8.6" xml:space="preserve"><tspan class="tk-punc">};</tspan></text>
+              <rect class="laptop-cursor" x="106" y="198" width="5.5" height="11" rx="1"/>
 
-              <!-- base -->
-              <ellipse class="ground" cx="230" cy="314" rx="188" ry="7" filter="url(#lgBlur)"/>
-              <path class="base" d="M46 257 L414 257 C421 257 426.5 261.5 428.5 268 L440.5 296 C442.5 303 437.5 308.5 430.5 308.5 L29.5 308.5 C22.5 308.5 17.5 303 19.5 296 L31.5 268 C33.5 261.5 39 257 46 257 Z" fill="url(#lgBase)"/>
-              <rect class="deck-key" x="120" y="270" width="220" height="8" rx="4"/>
-              <rect class="deck-notch" x="205" y="287" width="50" height="5" rx="2.5"/>
+              <rect x="70" y="36" width="320" height="204" rx="8" fill="url(#lgShine)" clip-path="url(#scrClip)"/>
+
+              <!-- hinge + base -->
+              <rect class="hinge" x="92" y="254" width="276" height="6" rx="3" fill="url(#lgMetal)"/>
+              <ellipse class="ground" cx="230" cy="316" rx="196" ry="8" filter="url(#lgBlur)"/>
+              <path class="base" d="M44 260 L416 260 C424 260 430 265 432 272 L444 298 C446 306 440 312 432 312 L28 312 C20 312 14 306 16 298 L28 272 C30 265 36 260 44 260 Z" fill="url(#lgBase)"/>
+              <g class="deck-key">
+                <rect x="92" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="114" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="136" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="158" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="180" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="202" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="224" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="246" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="268" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="290" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="312" y="272" width="18" height="7" rx="1.6"/>
+                <rect x="334" y="272" width="34" height="7" rx="1.6"/>
+                <rect x="108" y="283" width="244" height="6" rx="2"/>
+              </g>
+              <rect class="deck-notch" x="198" y="294" width="64" height="9" rx="3"/>
             </svg>
           </div>
           <div class="stats">
@@ -1073,7 +1159,7 @@ footer { border-top: 1px solid var(--border); background: var(--bg-soft); }
 
   function applyTheme(mode) {
     root.setAttribute('data-theme', mode);
-    if (meta) { meta.setAttribute('content', mode === 'light' ? '#FAFBFF' : '#0B0F17'); }
+    if (meta) { meta.setAttribute('content', mode === 'light' ? '#F4F5F0' : '#181C18'); }
     if (tBtn) {
       tBtn.setAttribute('aria-pressed', mode === 'light' ? 'true' : 'false');
       tBtn.setAttribute('aria-label', mode === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
